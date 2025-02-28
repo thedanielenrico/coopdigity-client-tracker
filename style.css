@@ -1,10 +1,9 @@
-body {
-  padding: 48px 120px;
+:root {
+  --border-standard: 1px solid black;
 }
 
-table {
-  width: fit-content;
-  margin: auto;
+body {
+  padding: 48px 120px;
 }
 
 .client-id-input-section {
@@ -12,15 +11,25 @@ table {
 }
 
 table {
-  border: 1px solid black;
+  margin: auto;
+  border: var(--border-standard);
   border-collapse: collapse;
-  padding: 24px;
 }
 
 th,
 td {
-  padding: 15px;
+  padding: 12px;
 }
+
+th:not(:last-child),
+td:not(:last-child) {
+  border-right: var(--border-standard);
+}
+
+tr {
+  border-top: var(--border-standard);
+}
+
 tr:nth-child(even) {
   background-color: #d6eeee;
 }
