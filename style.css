@@ -10,6 +10,12 @@ body {
   margin-bottom: 24px;
 }
 
+.is-completed-icon {
+  color: #4281bd;
+  font-size: 16px;
+  line-height: inherit;
+}
+
 table {
   margin: auto;
   border: var(--border-standard);
@@ -19,6 +25,7 @@ table {
 th,
 td {
   padding: 12px;
+  text-align: center;
 }
 
 th:not(:last-child),
