@@ -17,6 +17,9 @@ clientIdSubmit.addEventListener("click", () => {
 function fetchClientData(clientId) {
   if (clientId) {
     const endpoint = `${url}${ssid}/gviz/tq?gid=${clientId}`;
+    if (output.hasChildNodes()) {
+      output.innerHTML = "";
+    }
 
     fetch(endpoint)
       .then((res) => res.text())
@@ -25,7 +28,7 @@ function fetchClientData(clientId) {
         const json = JSON.parse(temp);
         const rows = json.table.rows;
         const cols = json.table.cols;
-
+        console.log(json);
         cols.forEach((col) => {
           if (col.label !== "Progress Bar") {
             const colHeader = document.createElement("th");
@@ -50,5 +53,3 @@ function fetchClientData(clientId) {
       });
   }
 }
-
-fetchClientData();
