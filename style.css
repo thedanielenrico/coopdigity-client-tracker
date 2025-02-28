@@ -1,0 +1,26 @@
+body {
+  padding: 48px 120px;
+}
+
+table {
+  width: fit-content;
+  margin: auto;
+}
+
+.client-id-input-section {
+  margin-bottom: 24px;
+}
+
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 24px;
+}
+
+th,
+td {
+  padding: 15px;
+}
+tr:nth-child(even) {
+  background-color: #d6eeee;
+}
