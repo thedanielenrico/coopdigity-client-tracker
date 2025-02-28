@@ -42,8 +42,14 @@ function fetchClientData(clientId) {
           rowContent.forEach((cell) => {
             if (cell) {
               const tableData = document.createElement("td");
-              tableData.textContent = cell.v;
-              tableData.classList.add("box");
+
+              if (typeof cell.v === "boolean") {
+                tableData.innerHTML = `<i class="material-icons is-completed-icon">${
+                  cell.v ? "check_box" : "check_box_outline_blank"
+                }</i>`;
+              } else {
+                tableData.textContent = cell.v;
+              }
               tableRow.append(tableData);
             }
           });

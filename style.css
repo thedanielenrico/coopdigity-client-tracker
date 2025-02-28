@@ -1,0 +1,42 @@
+:root {
+  --border-standard: 1px solid black;
+}
+
+body {
+  padding: 48px 120px;
+}
+
+.client-id-input-section {
+  margin-bottom: 24px;
+}
+
+.is-completed-icon {
+  color: #4281bd;
+  font-size: 16px;
+  line-height: inherit;
+}
+
+table {
+  margin: auto;
+  border: var(--border-standard);
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: center;
+}
+
+th:not(:last-child),
+td:not(:last-child) {
+  border-right: var(--border-standard);
+}
+
+tr {
+  border-top: var(--border-standard);
+}
+
+tr:nth-child(even) {
+  background-color: #d6eeee;
+}
